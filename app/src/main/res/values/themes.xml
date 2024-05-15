@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Touch_ELogin" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="Theme.Touch_ELogin" parent="Base.Theme.Touch_ELogin" />
+
+    <style name="MyRatingBar" parent="@android:style/Widget.DeviceDefault.RatingBar.Indicator">
+        <item name="android:minHeight">@dimen/_30sdp</item>
+        <item name="android:maxHeight">@dimen/_30sdp</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/textGray</item>
+        <item name="colorControlActivated">@color/blue</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:dropDownVerticalOffset">-40dp</item>
+    </style>
+
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:datePickerStyle">@style/MyDatePickerStyleDark</item>
+        <item name="android:windowBackground">@color/black2</item>
+    </style>
+
+    <style name="MyDatePickerStyleDark" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:headerBackground">@color/black2</item>
+    </style>
+
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="MyRipple">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="colorControlHighlight">@color/textGray</item>
+    </style>
+
+</resources>
