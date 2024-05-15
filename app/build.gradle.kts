@@ -74,12 +74,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("com.intuit.sdp:sdp-android:1.1.0")
-    implementation("com.intuit.ssp:ssp-android:1.1.0")
+    implementation("com.google.android.material:material:1.11.0")
 
     implementation(files("../plugin/toucheplugin.aar"))
 
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.intuit.sdp:sdp-android:1.1.0")
+    implementation("com.intuit.ssp:ssp-android:1.1.0")
 
     // Rest API
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1")
@@ -111,12 +111,6 @@ dependencies {
     // Dot Indicator
     implementation("ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.0.0")
     implementation("com.tbuonomo:dotsindicator:5.0")
-
-    // Simple RatingBar
-//    implementation("com.github.ome450901:SimpleRatingBar:1.5.1")
-
-    // Exact RatingBar
-//    implementation("com.github.Jamshid-M:ExactRatingBar:1.0.0")
 
     // Vertical Seekbar
     implementation("com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0")

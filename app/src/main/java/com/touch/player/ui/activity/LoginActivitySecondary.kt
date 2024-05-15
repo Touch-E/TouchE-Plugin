@@ -27,18 +27,18 @@ class LoginActivitySecondary : AppCompatActivity() {
     }
 
     private fun setClick() {
-        login = OpenClass()
+        login = OpenClass(this)
+
+        login.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
+            Log.d("TouchEPlugin Log", "urlString: $urlString, $userToken")
+            Log.d("TouchEPlugin Log", "validateURLAndToken: $isURLValid, $isTokenValid")
+        }
 
         binding.btnLogin.setOnClickListener {
             val loginRequest = LoginRequest(
                 password = binding.edtPassword.text.toString().trim(),
                 email = binding.edtEmail.text.toString().trim()
             )
-
-            login.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
-                Log.d("OKL", "urlString: $urlString, $userToken")
-                Log.d("OKL", "validateURLAndToken: $isURLValid, $isTokenValid")
-            }
 
             login.userAuthentication(loginRequest) { response ->
                 if (response?.isSuccessful == true) {
@@ -56,6 +56,7 @@ class LoginActivitySecondary : AppCompatActivity() {
                 putExtra("login_response", data)
             }
             startActivity(intent)
+            finish()
         } else {
             showToast("Error logging you in")
         }

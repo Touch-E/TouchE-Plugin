@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Touch-E Login</string>
+    <string name="app_name">Touch-E Plugin</string>
     <string name="sign_in">Sign-in</string>
     <string name="sign_up">Sign-up</string>
     <string name="e_mail">E-mail</string>
