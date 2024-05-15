@@ -2,13 +2,13 @@ package com.touch.player.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.touch.player.databinding.ActivityLoginSecondaryBinding
 import com.touch.player.showToast
 import com.touche.player.data.api.request.LoginRequest
 import com.touche.player.data.api.response.LoginResponse
 import com.touche.player.utils.OpenClass
+import com.touche.player.utils.SessionManager
 
 class LoginActivitySecondary : AppCompatActivity() {
 
@@ -28,10 +28,13 @@ class LoginActivitySecondary : AppCompatActivity() {
 
     private fun setClick() {
         login = OpenClass(this)
+        if (SessionManager.getToken(this) != null) {
+            userToken = SessionManager.getToken(this).toString()
+        }
 
         login.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
-            Log.d("TouchEPlugin Log", "urlString: $urlString, $userToken")
-            Log.d("TouchEPlugin Log", "validateURLAndToken: $isURLValid, $isTokenValid")
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
         binding.btnLogin.setOnClickListener {
@@ -52,10 +55,7 @@ class LoginActivitySecondary : AppCompatActivity() {
 
     private fun processLogin(data: LoginResponse?) {
         if (data != null) {
-            val intent = Intent(this, MainActivity::class.java).apply {
-                putExtra("login_response", data)
-            }
-            startActivity(intent)
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         } else {
             showToast("Error logging you in")

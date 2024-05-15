@@ -31,19 +31,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        showLoading()
         homeScreen = OpenClass(this)
+        homeScreen.getMovieDetail {
+            processData(it)
+        }
 
-        loginResponse = intent.getSerializableExtra("login_response") as? LoginResponse
+        homeScreen.getCartDataCount {
+            if (it != null) {
+                if (listOf(it).isNotEmpty()) binding.tvCartItemsNumber.visibility = View.VISIBLE
 
-        loginResponse?.let {
-            showLoading()
-
-            homeScreen.getMovieDetail(loginResponse!!.accessToken) {
-                processData(it)
-            }
-
-            homeScreen.getCartDataCount(loginResponse!!.userDetails.id) {
-                Log.d("TouchEPlugin Log", "getCartDataCount: $it")
+                if (it.size.toString().length == 1 || it.size.toString().length == 2) {
+                    binding.tvCartItemsNumber.text = " ${it.size} "
+                } else {
+                    binding.tvCartItemsNumber.text = it.size.toString()
+                }
             }
         }
 
@@ -97,7 +99,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         loginResponse?.let {
-            homeScreen.getCartDataCount(loginResponse!!.userDetails.id) {
+            homeScreen.getCartDataCount {
                 if (it != null) {
                     if (listOf(it).isNotEmpty()) binding.tvCartItemsNumber.visibility = View.VISIBLE
 
