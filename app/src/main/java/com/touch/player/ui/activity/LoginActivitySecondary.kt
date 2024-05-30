@@ -15,9 +15,6 @@ class LoginActivitySecondary : AppCompatActivity() {
     private lateinit var binding: ActivityLoginSecondaryBinding
     private lateinit var login: OpenClass
 
-    val urlString = "https://api-cluster.system.touchetv.com"
-    var userToken = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginSecondaryBinding.inflate(layoutInflater)
@@ -28,14 +25,16 @@ class LoginActivitySecondary : AppCompatActivity() {
 
     private fun setClick() {
         login = OpenClass(this)
-        if (SessionManager.getToken(this) != null) {
-            userToken = SessionManager.getToken(this).toString()
-        }
-
-        login.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }
+//        if (SessionManager.getToken(this) != null) {
+//            userToken = SessionManager.getToken(this).toString()
+//        }
+//
+//        login.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
+//            if (isURLValid && isTokenValid) {
+//                startActivity(Intent(this, MainActivity::class.java))
+//                finish()
+//            }
+//        }
 
         binding.btnLogin.setOnClickListener {
             val loginRequest = LoginRequest(
