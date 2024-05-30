@@ -54,7 +54,7 @@ Once you have your AAR file added to your project, you have to add some dependen
 
 ## Usage
 ### Usage of AAR file
-In your Android studio project just add TouchEPlugin.
+In your Android studio project just add TouchEPlugin.aar which is given above.
 
 After that First check your server URL is valid or not and User are already login or not in TouchEPlugin using validateURLAndToken method.
 
@@ -106,12 +106,12 @@ Get movie list using getMovieDetail method
             //use this method for get movie list
             homeScreen = OpenClass(this)
 
-            homeScreen.getMovieDetail(loginResponse!!.accessToken) {
+            homeScreen.getMovieDetail {
                 Log.d("TouchEPlugin Log", "getMovieDetail: $it")
             }
 
             //Use this method for get my cart count
-              homeScreen.getCartDataCount(loginResponse!!.userDetails.id) {
+              homeScreen.getCartDataCount {
                 Log.d("TouchEPlugin Log", "getCartDataCount: $it")
             }
 
