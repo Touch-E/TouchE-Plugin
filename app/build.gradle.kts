@@ -76,8 +76,8 @@ dependencies {
 
     implementation("com.google.android.material:material:1.11.0")
 
-//    implementation(files("../plugin/TouchePlugin.aar"))
     implementation(files("../plugin/TouchePlugin.aar"))
+//    implementation(files("../plugin/app-debug.aar"))
 
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")

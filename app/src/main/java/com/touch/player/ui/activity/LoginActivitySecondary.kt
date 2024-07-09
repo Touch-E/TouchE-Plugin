@@ -8,7 +8,6 @@ import com.touch.player.showToast
 import com.touche.player.data.api.request.LoginRequest
 import com.touche.player.data.api.response.LoginResponse
 import com.touche.player.utils.OpenClass
-import com.touche.player.utils.SessionManager
 
 class LoginActivitySecondary : AppCompatActivity() {
 
