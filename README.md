@@ -103,14 +103,14 @@ Get movie list using getMovieDetail method
     private var loginResponse: LoginResponse? = null
     private var data: List<AllContentsResponse>? = null
 
-            //use this method for get movie list
+            // Use this method for get movie list
             homeScreen = OpenClass(this)
 
             homeScreen.getMovieDetail {
                 Log.d("TouchEPlugin Log", "getMovieDetail: $it")
             }
 
-            //Use this method for get my cart count
+            // Use this method for get my cart count
               homeScreen.getCartDataCount {
                 Log.d("TouchEPlugin Log", "getCartDataCount: $it")
             }
