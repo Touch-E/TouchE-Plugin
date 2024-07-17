@@ -4,12 +4,18 @@
 `TouchEPlugin` is a Kotlin package designed to streamline the integration of touch-based interactions within your android applications.
 
 ## Installation
-The Package Manager is a tool for automating the distribution of Android kotlin code and is integrated into the AAR file.
 
-Once you have your AAR file added to your project, you have to add some dependencies & AAR file in to your project which given below
+The Package Manager is a tool for automating the distribution of Android Kotlin code and is integrated into the AAR file. Follow the steps below to add the AAR file to your project.
 
-    implementation(files("../plugin/toucheplugin.aar"))
+### Step 1: Add the AAR File
 
+Add the AAR file to your project. Place the AAR file in a suitable directory, for example, `libs` or a custom directory like `plugin`.
+
+```gradle
+implementation(files("../plugin/toucheplugin.aar"))
+```
+
+### Add Dependencies
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")
 
