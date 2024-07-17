@@ -14,6 +14,13 @@ Add the AAR file to your project. Place the AAR file in a suitable directory, fo
 ```gradle
 implementation(files("../plugin/toucheplugin.aar"))
 ```
+your_project/
+├── app/
+│   ├── build.gradle
+│   └── src/
+├── plugin/
+│   └── toucheplugin.aar
+└── build.gradle
 
 ### Add Dependencies
     implementation("com.intuit.sdp:sdp-android:1.1.0")
