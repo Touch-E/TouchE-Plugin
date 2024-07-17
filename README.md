@@ -146,11 +146,10 @@ Get Cart Data Count using `getCartDataCount` method (example given below)
     private var loginResponse: LoginResponse? = null
     private var data: List<AllContentsResponse>? = null
 
-            // Use this method for get movie list
+            // Use this method for get Cart Data Count
             homeScreen = OpenClass(this)
 
-            // Use this method for get my cart count
-              homeScreen.getCartDataCount {
+            homeScreen.getCartDataCount {
                 Log.d("TouchEPlugin Log", "getCartDataCount: $it")
             }
 
