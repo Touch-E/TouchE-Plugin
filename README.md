@@ -72,15 +72,15 @@ Make sure to sync your project with Gradle files after adding the dependencies. 
 
 ## Usage
 
-In your Android studio project just add `TouchEPlugin.aar` which is given above.
+### Step 5: Validate Server URL and User Token
 
-After that First check your server URL is valid or not and User are already login or not in TouchEPlugin using validateURLAndToken method.
+After adding `TouchEPlugin` First validate the server URL is valid or not and check if the user is already logged in or not in TouchEPlugin using the `validateURLAndToken` method which is given below with example.
 
 ```
     private lateinit var login: OpenClass
 
     val urlString = "https://api-cluster.system.touchetv.com"
-    var userToken = ""
+    var userToken = "" // If user already login assign save token here.
 
         login = OpenClass(this)
 
@@ -90,9 +90,13 @@ After that First check your server URL is valid or not and User are already logi
         }
 ```
 
-## Login
+## User Authentication and Profile Data Handling
 
-Login using userAuthentication method in which you have to just pass username and password.
+To authenticate a user and manage their profile data, you can use the `userAuthentication` method provided by `TouchEPlugin`
+
+## User Login
+
+Login using `userAuthentication` method which nedds a username and password, then returns a result indicating success or failure.
 
 After successfully login save user data in your project.
 
@@ -112,9 +116,13 @@ After successfully login save user data in your project.
 
 ```
 
-## Get Movie list Data
+## Retrieving Movie List and Cart Data
 
-Get movie list using getMovieDetail method
+To fetch movie lists and cart data, you can use the `getMovieDetail` and `getCartDataCount` methods respectively.
+
+### Get Movie list Data
+
+Get movie list using `getMovieDetail` method (example given below)
 
 ```
     private lateinit var homeScreen: OpenClass
@@ -127,6 +135,19 @@ Get movie list using getMovieDetail method
             homeScreen.getMovieDetail {
                 Log.d("TouchEPlugin Log", "getMovieDetail: $it")
             }
+```
+
+### Get Cart Data Count
+
+Get Cart Data Count using `getCartDataCount` method (example given below)
+
+```
+    private lateinit var homeScreen: OpenClass
+    private var loginResponse: LoginResponse? = null
+    private var data: List<AllContentsResponse>? = null
+
+            // Use this method for get movie list
+            homeScreen = OpenClass(this)
 
             // Use this method for get my cart count
               homeScreen.getCartDataCount {
@@ -135,7 +156,11 @@ Get movie list using getMovieDetail method
 
 ```
 
-## Navigation to Movie Details Screen
+## Screen Navigation
+
+`TouchEPlugin` supports navigation to various screens in your app, such as movie details, cart, and profile screens.
+
+## Navigate to Movie Details Screen
 
 ```
 val intent = Intent(this, MovieDetailActivity::class.java)
@@ -143,8 +168,14 @@ intent.putExtra("movieID", movieID)
 startActivity(intent)
 ```
 
-## Navigation to My Cart Screen
+### Navigate to My Cart Screen
 
 ```
 startActivity(Intent(this, CartActivity::class.java))
+```
+
+### Navigate to My Profile Screen
+
+```
+startActivity(Intent(this, AccountDetailsActivity::class.java))
 ```
