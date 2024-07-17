@@ -19,41 +19,49 @@ implementation(files("../plugin/toucheplugin.aar"))
 
 Ensure that you add any additional dependencies required by the AAR file to your build.gradle file.
 
-dependencies {
     implementation files("../plugin/toucheplugin.aar")
+    
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")
+    
     // Rest API
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
     implementation("androidx.fragment:fragment-ktx:1.4.1")
+    
     // Lifecycle
     implementation("androidx.lifecycle:lifecycle-common:2.4.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+    
     // Preferences
     implementation("androidx.preference:preference-ktx:1.2.0")
+    
     // Glide for image loading
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    
     // Amazon AWS SDK
     implementation("com.amazonaws:aws-android-sdk-s3:2.17.1")
+    
     // Dot Indicator Libraries
     implementation("ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.0.0")
     implementation("com.tbuonomo:dotsindicator:5.0")
+    
     // Vertical Seekbar
     implementation("com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0")
+    
     // ExoPlayer
     implementation("com.google.android.exoplayer:exoplayer-core:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-dash:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-ui:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-hls:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-rtsp:2.17.1")
-}
 
 
 
