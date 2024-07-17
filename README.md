@@ -68,7 +68,7 @@ In your project's `build.gradle` file, include the AAR file and other dependenci
 
 Make sure to sync your project with Gradle files after adding the dependencies. You can do this by clicking the "Sync Now" button in the notification bar or by selecting `File > Sync Project with Gradle Files`.
 
-## Usage of AAR file
+## Usage
 
 In your Android studio project just add `TouchEPlugin.aar` which is given above.
 
