@@ -1,7 +1,7 @@
 # TouchE-Plugin
 
 ## Overview
-'TouchePlugin' is a Kotlin package designed to streamline the integration of touch-based interactions within your android applications.
+' TouchePlugin ' is a Kotlin package designed to streamline the integration of touch-based interactions within your android applications.
 
 ## Installation
 The Package Manager is a tool for automating the distribution of Android kotlin code and is integrated into the AAR file.
