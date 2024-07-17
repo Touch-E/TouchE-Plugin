@@ -28,12 +28,10 @@ dependencies {
     // Rest API
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
 
-    // Coroutines"
+    // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
@@ -41,32 +39,32 @@ dependencies {
 
     // Lifecycle
     implementation("androidx.lifecycle:lifecycle-common:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
 
+    // Preferences
     implementation("androidx.preference:preference-ktx:1.2.0")
 
-    // Glide
+    // Glide for image loading
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    // amazon aws
+    // Amazon AWS SDK
     implementation("com.amazonaws:aws-android-sdk-s3:2.17.1")
 
-    // Dot Indicator
+    // Dot Indicator Libraries
     implementation("ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.0.0")
     implementation("com.tbuonomo:dotsindicator:5.0")
 
     // Vertical Seekbar
     implementation("com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0")
 
-    //exoplayer
+    // ExoPlayer
     implementation("com.google.android.exoplayer:exoplayer-core:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-dash:2.17.1")
-    implementation("com.google.android.exoplayer:exoplayer-ui:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-ui:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-hls:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-rtsp:2.17.1")
 }
+
 
 
 ## Usage
