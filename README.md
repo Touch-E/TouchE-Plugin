@@ -12,7 +12,9 @@ The Package Manager is a tool for automating the distribution of Android Kotlin 
 Add the AAR file to your project. Place the AAR file in a suitable directory, for example, `libs` or a custom directory like `plugin`.
 
 ```gradle
-implementation(files("../plugin/toucheplugin.aar"))
+dependencies {
+    implementation files("../plugin/toucheplugin.aar")
+}
 ```
 
 ### Step 2: Add Dependencies
