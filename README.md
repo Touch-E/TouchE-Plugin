@@ -15,7 +15,7 @@ Add the AAR file to your project. Place the AAR file in a suitable directory, fo
 implementation(files("../plugin/toucheplugin.aar"))
 ```
 
-### Add Dependencies
+### Step 2: Add Dependencies
 
 In your project's `build.gradle` file, include the AAR file and other dependencies:
 
@@ -64,6 +64,9 @@ In your project's `build.gradle` file, include the AAR file and other dependenci
     implementation("com.google.android.exoplayer:exoplayer-rtsp:2.17.1")
 
 
+### Step 4: Sync Project with Gradle Files
+
+Make sure to sync your project with Gradle files after adding the dependencies. You can do this by clicking the "Sync Now" button in the notification bar or by selecting `File > Sync Project with Gradle Files`.
 
 ## Usage
 ### Usage of AAR file
