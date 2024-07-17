@@ -14,15 +14,14 @@ Add the AAR file to your project. Place the AAR file in a suitable directory, fo
 ```gradle
 implementation(files("../plugin/toucheplugin.aar"))
 ```
-your_project/
-├── app/
-│   ├── build.gradle
-│   └── src/
-├── plugin/
-│   └── toucheplugin.aar
-└── build.gradle
 
 ### Add Dependencies
+
+Ensure that you add any additional dependencies required by the AAR file to your build.gradle file.
+
+dependencies {
+    implementation files("../plugin/toucheplugin.aar")
+
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")
 
@@ -67,6 +66,7 @@ your_project/
     implementation("com.google.android.exoplayer:exoplayer-ui:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-hls:2.17.1")
     implementation("com.google.android.exoplayer:exoplayer-rtsp:2.17.1")
+}
 
 
 ## Usage
