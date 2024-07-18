@@ -3,6 +3,18 @@
 ## Overview
 `TouchEPlugin` is a Kotlin package designed to streamline the integration of touch-based interactions within your android applications.
 
+## SDK supported features:
+1. Login to custom server
+2. Display list of movies/tv shows available on server
+3. Movie detail page
+4. Detailed Movie character page
+5. Purchase Product from which showed in movie
+6. Additional features to like Drag & Drop directly from movie to purchase product
+7. Add product to Cart
+8. Movie screen includes Vov (Video over video)
+9. SDK includes User info screen
+10. Order history with user Rating
+
 ## Installation
 
 The Package Manager is a tool for automating the distribution of Android Kotlin code and is integrated into the AAR file. Follow the steps below to add the AAR file to your project.
