@@ -120,7 +120,7 @@ After successfully login save user data in your project.
 
             login.userAuthentication(loginRequest) { response ->
                 if (response?.isSuccessful == true) {
-                    processLogin(response.body())
+                    // Login is Successful processed ahead
                 } else {
                     showToast("Error logging you in")
                 }
