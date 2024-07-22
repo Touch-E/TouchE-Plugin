@@ -94,7 +94,11 @@ After adding `TouchEPlugin` First validate the server URL is valid or not and ch
     val urlString = "https://api-cluster.system.touchetv.com"
     var userToken = "" // If user already login assign save token here.
 
+
         homeScreen = OpenClass(this)
+
+        // by useing this line it will save "userToken" in local database which is necessary to avoid error or crash
+        userToken = SessionManager.getToken(this).orEmpty()
 
         homeScreen.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
             Log.d("TouchEPlugin Log", "urlString: $urlString, $userToken")
