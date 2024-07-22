@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Touch_E Login"
+rootProject.name = "TouchE Demo"
 include(":app")
