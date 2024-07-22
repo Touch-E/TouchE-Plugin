@@ -97,7 +97,7 @@ After adding `TouchEPlugin` First validate the server URL is valid or not and ch
 
         homeScreen = OpenClass(this)
 
-        // by useing this line it will save "userToken" in local database which is necessary to avoid error or crash
+        // by using this line it will save "userToken" in local database which is necessary to avoid error or crash
         userToken = SessionManager.getToken(this).orEmpty()
 
         homeScreen.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
@@ -128,7 +128,7 @@ After successfully login save user data in your project.
             login.userAuthentication(loginRequest) { response ->
                 if (response?.isSuccessful == true) {
                     // Login is Successful processed ahead
-                    // to use response.body() you have to have LoginResponse which you can import with just writing LoginResponse? and improt that
+                    // to use response.body() you have to have LoginResponse which you can import with just writing LoginResponse? and import that
                 } else {
                     Toast.makeText(this, "Error logging you in", Toast.LENGTH_SHORT).show()
                 }
