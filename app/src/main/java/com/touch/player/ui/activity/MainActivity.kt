@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.touch.player.R
 import com.touch.player.databinding.ActivityMainBinding
 import com.touch.player.setPreviewBothSide
-import com.touche.player.R
 import com.touche.player.data.api.response.AllContentsResponse
 import com.touche.player.ui.activity.AccountDetailsActivity
 import com.touche.player.ui.activity.CartActivity
@@ -17,9 +17,7 @@ import com.touche.player.ui.activity.MovieDetailActivity
 import com.touche.player.ui.adapter.ViewPagerAdapter
 import com.touche.player.utils.OpenClass
 import com.touche.player.utils.SessionManager
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
@@ -90,7 +88,6 @@ class MainActivity : AppCompatActivity() {
                 if (userImageUrl.isNotEmpty()) {
                     Glide.with(this)
                         .load(userImageUrl)
-                        .placeholder(R.drawable.user_bg_icon)
                         .into(binding.ivUser)
                 }
             }
