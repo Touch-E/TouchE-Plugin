@@ -89,14 +89,14 @@ Make sure to sync your project with Gradle files after adding the dependencies. 
 After adding `TouchEPlugin` First validate the server URL is valid or not and check if the user is already logged in or not in TouchEPlugin using the `validateURLAndToken` method which is given below with example.
 
 ```
-    private lateinit var login: OpenClass
+    private lateinit var homeScreen: OpenClass
 
     val urlString = "https://api-cluster.system.touchetv.com"
     var userToken = "" // If user already login assign save token here.
 
-        login = OpenClass(this)
+        homeScreen = OpenClass(this)
 
-        login.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
+        homeScreen.validateURLAndToken(urlString, userToken) { isURLValid, isTokenValid ->
             Log.d("TouchEPlugin Log", "urlString: $urlString, $userToken")
             Log.d("TouchEPlugin Log", "validateURLAndToken: $isURLValid, $isTokenValid")
         }
@@ -113,6 +113,9 @@ Login using `userAuthentication` method which nedds a username and password, the
 After successfully login save user data in your project.
 
 ```
+            login = OpenClass(this)
+
+
             val loginRequest = LoginRequest(
                 password = binding.edtPassword.text.toString().trim(),
                 email = binding.edtEmail.text.toString().trim()
@@ -138,7 +141,6 @@ Get movie list using `getMovieDetail` method (example given below)
 
 ```
     private lateinit var homeScreen: OpenClass
-    private var loginResponse: LoginResponse? = null
     private var data: List<AllContentsResponse>? = null
 
             // Use this method for get movie list
@@ -155,7 +157,6 @@ Get Cart Data Count using `getCartDataCount` method (example given below)
 
 ```
     private lateinit var homeScreen: OpenClass
-    private var loginResponse: LoginResponse? = null
     private var data: List<AllContentsResponse>? = null
 
             // Use this method for get Cart Data Count
