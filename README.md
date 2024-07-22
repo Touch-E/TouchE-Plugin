@@ -124,6 +124,7 @@ After successfully login save user data in your project.
             login.userAuthentication(loginRequest) { response ->
                 if (response?.isSuccessful == true) {
                     // Login is Successful processed ahead
+                    // to use response.body() you have to have LoginResponse which you can import with just writing LoginResponse? and improt that
                 } else {
                     showToast("Error logging you in")
                 }
