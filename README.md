@@ -25,7 +25,7 @@ Add the AAR file to your project. Place the AAR file in a suitable directory, fo
 
 ```gradle
 dependencies {
-    implementation files("../plugin/toucheplugin.aar")
+    implementation(files("../plugin/TouchePlugin.aar"))
 }
 ```
 
