@@ -32,6 +32,8 @@ dependencies {
 ### Step 2: Add Dependencies
 
 In your project's `build.gradle` file, include the AAR file and other dependencies:
+
+    implementation("com.google.android.material:material:1.11.0")
    
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")
